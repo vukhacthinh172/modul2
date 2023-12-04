@@ -9,7 +9,7 @@ import java.util.List;
 
 public class StudentManagement {
     List<Student> studentList ;
-    public  void StudentManagement(){
+    public  StudentManagement(){
       studentList= new ArrayList<>();
     }
     //phương thức hiển thị tất cả trong student
@@ -52,12 +52,12 @@ public class StudentManagement {
            double totalScore = 0.0;
            for (int i = 0; i <studentList.size() ; i++) {
                Student student = studentList.get(i);
-                     totalScore+= student.getScore();
+                     totalScore+= student.getAverageScore();
            }
            return totalScore / studentList.size();
        }
     }
     public void sortByScore(){
-        Collections.sort(studentList, Comparator.comparingDouble(Student::getScore));
+        Collections.sort(studentList,(Comparator.comparingDouble(Student::getAverageScore)));
     }
 }

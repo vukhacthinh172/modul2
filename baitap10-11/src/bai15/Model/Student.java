@@ -37,9 +37,6 @@ public class Student {
     public void setAverageScore(Double averageScore) {
         this.averageScore = averageScore;
     }
-    public double getScore() {
-        return averageScore;
-    }
 
     @Override
     public String toString() {
